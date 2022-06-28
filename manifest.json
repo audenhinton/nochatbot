@@ -1,10 +1,10 @@
 {
     "name": "No Chatbot",
     "description": "A tiny extension to block chat popup windows while browsing websites.",
-    "version": "1.0",
+    "version": "0.0.0.1",
     "manifest_version": 3,
     "permissions": [
-        "activeTab", "scripting"
+        "activeTab", "tabs"
     ],
     "icons": {
         "16": "icons/icon_16.png",
@@ -12,7 +12,11 @@
         "48": "icons/icon_48.png",
         "128": "icons/icon_128.png"
       },
-    "background": {
-        "service_worker": "plugin.js"
-    }
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["nochatbot.js"],
+          "run_at": "document_end"
+        }
+      ]
 }
