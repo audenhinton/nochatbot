@@ -3,7 +3,7 @@ function killElement(query, message){
     if (items.length > 0) {
         items.map((item) => {
             item.remove()
-            console.log(message)
+            console.log(message, 'Learn more at https://nochatbot.com')
         })
     }
 }
@@ -18,6 +18,28 @@ function block() {
     
     // block Zoho Sales IQ
     killElement('[data-id=zsalesiq]', 'Zoho Sales IQ chat popup blocked.')
+    
+    // Freshchat
+    killElement('#fc_widget', 'Freshchat chat popup blocked.')
+    
+    // Zendesk
+    killElement('#web-messenger-container', 'Zendesk chat popup blocked.')
+    
+    // Birdeye
+    killElement('#bewebchat', 'Birdeye chat popup blocked.')
+    
+    // Qualified
+    killElement('#q-messenger-frame', 'Qualified chat popup blocked.')
+    
+    // ada
+    killElement('#ada-button-frame', 'ada chat popup blocked.')
+    
+    // podium
+    killElement('#podium-bubble', 'Podium chat popup blocked.')
+    killElement('#podium-website-widget', 'Podium chat popup blocked.')
+
+    // mobile monkey
+    killElement('#mm-chat-button', 'MobileMonkey chat popup blocked.')
     
 }
 
